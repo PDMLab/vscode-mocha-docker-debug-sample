@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "isShellCommand": true,
+    "command": "bash",
+    "args": [
+        "-c"
+    ],
+    "tasks": [
+        {
+            "taskName": "runmochaindocker",
+            "showOutput": "always",
+            "suppressTaskName": true,
+            "args": [
+                "docker exec -i vscodemocha bash -c \"./node_modules/mocha/bin/mocha --debug-brk=5858 -t 10000 test/test.js\""
+            ]
+        }
+    ]
+}
